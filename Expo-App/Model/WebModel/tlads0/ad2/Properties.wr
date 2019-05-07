@@ -1,0 +1,48 @@
+<ActionDefinition xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="tlads0#ad2" name="Create Stand" defaultSuccessPortDefinition="tlads0#ad2#spd2" defaultErrorPortDefinition="tlads0#ad2#epd2">
+  <Operations>
+    <Create gr:x="590" gr:y="95" id="tlads0#ad2#cru4" name="Create Stand" dataBinding="cls2">
+      <SuccessFlow id="tlads0#ad2#cru4#sf19" to="tlads0#ad2#spd2">
+        <ParameterBinding id="tlads0#ad2#cru4#sf19#par47" source="cls2#att1" target="tlads0#ad2#spd2#pdp6" name="oid - oid"/>
+      </SuccessFlow>
+      <ErrorFlow id="tlads0#ad2#cru4#ef6" to="tlads0#ad2#epd2" automaticCoupling="true"/>
+    </Create>
+    <Switch gr:x="385" gr:y="210" id="tlads0#ad2#switch4" name="Switch 4">
+      <SuccessFlow id="tlads0#ad2#switch4#sf16" to="tlads0#ad2#cru4" automaticCoupling="true" code="&lt;EMPTY&gt;"/>
+      <SuccessFlow id="tlads0#ad2#switch4#sf17" to="tlads0#ad2#mfu4" automaticCoupling="true"/>
+    </Switch>
+    <Update gr:x="485" gr:y="395" id="tlads0#ad2#mfu4" name="Update Stand" dataBinding="cls2">
+      <ConditionalExpression id="tlads0#ad2#mfu4#sc4" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="tlads0#ad2#mfu4#sc4#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </ConditionalExpression>
+      <ErrorFlow id="tlads0#ad2#mfu4#ef5" to="tlads0#ad2#epd2" automaticCoupling="true"/>
+      <SuccessFlow id="tlads0#ad2#mfu4#sf20" to="tlads0#ad2#spd2">
+        <ParameterBinding id="tlads0#ad2#mfu4#sf20#par48" source="cls2#att1" target="tlads0#ad2#spd2#pdp6" name="oid - oid"/>
+      </SuccessFlow>
+    </Update>
+  </Operations>
+  <InputPortDefinition id="tlads0#ad2#ipd2" gr:x="0" gr:y="30">
+    <SuccessFlow id="tlads0#ad2#ipd2#sf15" to="tlads0#ad2#switch4">
+      <ParameterBinding id="tlads0#ad2#ipd2#sf15#par25" sourceValue="oid" target="switch" name="&quot;oid&quot; - Switch"/>
+      <ParameterBinding id="tlads0#ad2#ipd2#sf15#par39" source="tlads0#ad2#ipd2#pdp5" target="switch" name="Switch - Switch"/>
+    </SuccessFlow>
+    <DataFlow id="tlads0#ad2#ipd2#df4" to="tlads0#ad2#cru4">
+      <ParameterBinding id="tlads0#ad2#ipd2#df4#par35" source="tlads0#ad2#ipd2#pdp1" target="cls2#att3" name="Name - Name"/>
+      <ParameterBinding id="tlads0#ad2#ipd2#df4#par36" source="tlads0#ad2#ipd2#pdp2" target="cls2#att4" name="Score - Score"/>
+      <ParameterBinding id="tlads0#ad2#ipd2#df4#par37" source="tlads0#ad2#ipd2#pdp3" target="cls2#att2" name="Logo - Logo"/>
+    </DataFlow>
+    <DataFlow id="tlads0#ad2#ipd2#df5" to="tlads0#ad2#mfu4">
+      <ParameterBinding id="tlads0#ad2#ipd2#df5#par38" source="tlads0#ad2#ipd2#pdp4" target="tlads0#ad2#mfu4#sc4#kcond4.cls2#att1" name="KeyCondition4 [oid] - KeyCondition4 [oid]"/>
+      <ParameterBinding id="tlads0#ad2#ipd2#df5#par40" source="tlads0#ad2#ipd2#pdp3" target="cls2#att2" name="Logo - Logo"/>
+      <ParameterBinding id="tlads0#ad2#ipd2#df5#par41" source="tlads0#ad2#ipd2#pdp1" target="cls2#att3" name="Name - Name"/>
+      <ParameterBinding id="tlads0#ad2#ipd2#df5#par42" source="tlads0#ad2#ipd2#pdp2" target="cls2#att4" name="Score - Score"/>
+    </DataFlow>
+    <PortDefinitionParameter id="tlads0#ad2#ipd2#pdp1" name="Name"/>
+    <PortDefinitionParameter id="tlads0#ad2#ipd2#pdp2" name="Score"/>
+    <PortDefinitionParameter id="tlads0#ad2#ipd2#pdp3" name="Logo"/>
+    <PortDefinitionParameter id="tlads0#ad2#ipd2#pdp4" name="oid"/>
+  </InputPortDefinition>
+  <SuccessPortDefinition id="tlads0#ad2#spd2" name="Success Port" gr:x="0" gr:y="30">
+    <PortDefinitionParameter id="tlads0#ad2#spd2#pdp6" name="oid"/>
+  </SuccessPortDefinition>
+  <ErrorPortDefinition id="tlads0#ad2#epd2" name="Error Port" gr:x="0" gr:y="300"/>
+</ActionDefinition>

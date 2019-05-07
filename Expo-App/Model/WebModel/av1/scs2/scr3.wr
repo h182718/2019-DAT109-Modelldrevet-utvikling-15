@@ -1,0 +1,82 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs2#scr3" name="Stands" gr:x="0" gr:y="5">
+  <ViewComponents>
+    <List id="av1#scs2#scr3#pwu1" name="Stands" eventOrder="av1#scs2#scr3#pwu1#oslte1" gr:x="0" gr:y="0" checkable="false" dataBinding="cls2" displayAttributes="cls2#att3">
+      <Events>
+        <OnSelectEvent id="av1#scs2#scr3#pwu1#oslte1" name="stand" validate="true">
+          <NavigationFlow id="av1#scs2#scr3#pwu1#oslte1#nf5" to="av1#scs2#scr5#enu2" name="StandClick">
+            <ParameterBinding id="av1#scs2#scr3#pwu1#oslte1#nf5#par17" source="data.cls2#att2" target="av1#scs2#scr5#enu2#fld3_preload" name="Logo - Logo"/>
+            <ParameterBinding id="av1#scs2#scr3#pwu1#oslte1#nf5#par18" source="data.cls2#att3" target="av1#scs2#scr5#enu2#fld4_preload" name="Name - Name"/>
+            <ParameterBinding id="av1#scs2#scr3#pwu1#oslte1#nf5#par19" source="data.cls2#att1" target="av1#scs2#scr5#enu2#fld5_preload" name="oid - oid"/>
+            <ParameterBinding id="av1#scs2#scr3#pwu1#oslte1#nf5#par20" source="data.cls2#att4" target="av1#scs2#scr5#enu2#fld6_preload" name="Score - Score"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+      <SortAttribute attribute="cls2#att4" order="descending"/>
+    </List>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs2#scr3#pwu1">
+          <layout:Event eventType="OnSelectEvent" event="av1#scs2#scr3#pwu1#oslte1"/>
+          <layout:Attribute attribute="cls2#att3"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:CustomLocation name="Bottom Bar" customizeContent="true">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Event panelId="av1#tlb1" event="av1#tlb1#oslte5" eventType="OnSelectEvent"/>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:CustomLocation name="Top Bar" customizeContent="true">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell layout:frameLayout="None"/>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</Screen>

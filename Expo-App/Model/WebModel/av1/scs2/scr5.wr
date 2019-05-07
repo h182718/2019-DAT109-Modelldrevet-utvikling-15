@@ -1,0 +1,82 @@
+<Screen xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="av1#scs2#scr5" name="Stand" gr:x="250" gr:y="0">
+  <ViewComponents>
+    <Form id="av1#scs2#scr5#enu2" name="Info" eventOrder="av1#scs2#scr5#enu2#oslte7 av1#scs2#scr5#enu2#oslte3" gr:x="0" gr:y="0" fieldOrder="av1#scs2#scr5#enu2#fld4 av1#scs2#scr5#enu2#fld3 av1#scs2#scr5#enu2#fld6">
+      <Field id="av1#scs2#scr5#enu2#fld3" name="Logo" type="blob" modifiable="false" preloaded="true"/>
+      <Field id="av1#scs2#scr5#enu2#fld4" name="Name" type="string" modifiable="false" preloaded="true"/>
+      <Events>
+        <OnSelectEvent id="av1#scs2#scr5#enu2#oslte3" name="QRCode" validate="true">
+          <NavigationFlow id="av1#scs2#scr5#enu2#oslte3#nf7" to="av1#scs2#scr5#brcd1">
+            <ParameterBinding id="av1#scs2#scr5#enu2#oslte3#nf7#par11" name="oid - Text" source="av1#scs2#scr5#enu2#fld5" target="text"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+        <OnSelectEvent id="av1#scs2#scr5#enu2#oslte7" name="Vote" validate="true">
+          <NavigationFlow id="av1#scs2#scr5#enu2#oslte7#nf17" to="av1#scs2#act7">
+            <ParameterBinding id="av1#scs2#scr5#enu2#oslte7#nf17#par43" source="av1#scs2#scr5#enu2#fld3" target="av1#scs2#act7.tlads0#ad2#ipd2#pdp3" name="Logo - Logo"/>
+            <ParameterBinding id="av1#scs2#scr5#enu2#oslte7#nf17#par44" source="av1#scs2#scr5#enu2#fld4" target="av1#scs2#act7.tlads0#ad2#ipd2#pdp1" name="Name - Name"/>
+            <ParameterBinding id="av1#scs2#scr5#enu2#oslte7#nf17#par45" source="av1#scs2#scr5#enu2#fld5" target="av1#scs2#act7.tlads0#ad2#ipd2#pdp4" name="oid - oid"/>
+            <ParameterBinding id="av1#scs2#scr5#enu2#oslte7#nf17#par46" source="av1#scs2#scr5#enu2#fld6" target="av1#scs2#act7.tlads0#ad2#ipd2#pdp2" name="Score - Score"/>
+          </NavigationFlow>
+        </OnSelectEvent>
+      </Events>
+      <Field id="av1#scs2#scr5#enu2#fld5" name="oid" type="string" preloaded="true" hidden="true"/>
+      <Field id="av1#scs2#scr5#enu2#fld6" name="Score" type="integer" preloaded="true" modifiable="true"/>
+    </Form>
+    <Barcode id="av1#scs2#scr5#brcd1" name="QRCode" gr:x="0" gr:y="130" format="QR_CODE" valueType="text"/>
+  </ViewComponents>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs2#scr5#enu2">
+          <layout:Event event="av1#scs2#scr5#enu2#oslte7" eventType="OnSelectEvent"/>
+          <layout:Event eventType="OnSelectEvent" event="av1#scs2#scr5#enu2#oslte3"/>
+          <layout:Field field="av1#scs2#scr5#enu2#fld4"/>
+          <layout:Field field="av1#scs2#scr5#enu2#fld3"/>
+          <layout:Field field="av1#scs2#scr5#enu2#fld6"/>
+        </layout:Component>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Component componentId="av1#scs2#scr5#brcd1"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <layout:CustomLocation name="Top Bar" customizeContent="true">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell>
+          <layout:Event eventType="HomeEvent"/>
+        </layout:Cell>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+  <layout:CustomLocation name="Bottom Bar" customizeContent="true">
+    <layout:Grid containerType="cell">
+      <layout:Row>
+        <layout:Cell/>
+      </layout:Row>
+    </layout:Grid>
+  </layout:CustomLocation>
+</Screen>

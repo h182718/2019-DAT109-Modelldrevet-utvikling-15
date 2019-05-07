@@ -1,0 +1,28 @@
+class Expo
+{
+   status {
+          Expo { LoggingIn -> LoggedIn;  }
+    LoggedIn {
+           IfUser -> Scan;
+          IfAdmin -> Controlpanel;
+          }
+     Signup {}
+     Scan{
+       ScanQR-> Stand;
+     }
+     Controlpanel{
+       AddStand -> AddStand;
+       AddExpo -> AddExpo;
+     }
+     AddStand{
+     }
+     AddExpo {
+     }
+     Vote{
+       -> Scan;
+        }
+     Stand{
+      Score0-5 -> Vote;
+     }
+   }
+}

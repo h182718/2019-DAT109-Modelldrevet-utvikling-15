@@ -1,0 +1,12 @@
+<ScreenSet xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="av1#scs2" name="User" protected="false" gr:x="170" gr:y="285">
+  <Action id="av1#scs2#act7" gr:x="435" gr:y="70" definition="tlads0#ad2">
+    <Events>
+      <SuccessEvent id="av1#scs2#act7#scce5" definition="tlads0#ad2#spd2">
+        <NavigationFlow id="av1#scs2#act7#scce5#nf16" to="av1#scs2#scr4#mssu2"/>
+      </SuccessEvent>
+      <ErrorEvent id="av1#scs2#act7#erre5" definition="tlads0#ad2#epd2" gr:pinned="true" gr:side="5" gr:pos="0">
+        <NavigationFlow id="av1#scs2#act7#erre5#nf19" to="av1#scs2#scr5" automaticCoupling="true"/>
+      </ErrorEvent>
+    </Events>
+  </Action>
+</ScreenSet>

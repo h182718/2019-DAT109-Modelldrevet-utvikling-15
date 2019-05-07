@@ -1,0 +1,5 @@
+Diskusjon:
+Samanlikna med den faktiske koden, er classane ganske like. Eg ser at UMPLE genererar ganske mange metodar,
+ der mange kanskje ikkje blir brukt. Det må nok takast ein gjennomgang for å sjå kva du vil ha med. Det er ingen av
+ klassane som er heilt lik den genererte koden.
+

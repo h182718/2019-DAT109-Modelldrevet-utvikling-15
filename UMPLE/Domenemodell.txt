@@ -1,0 +1,27 @@
+class Expo {
+  String expoName;
+  Date startTime;
+  Date endTime;
+}
+
+class Stand {
+  String standName;
+  *-- 1 Expo;
+  * -- * User owner;
+}
+
+class User {
+  String username;
+  Integer pin;
+  boolean isAdmin;
+  boolean isVerified;
+  boolean isJury;
+}
+
+class Vote {
+  Integer score;
+  *--1 User;
+  *--1 Stand;
+}
+
+
